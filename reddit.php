@@ -5,34 +5,57 @@
       $content=file_get_contents("https://ga.reddit.com/r/osugame/new.json?limit=100");
       $posts = json_decode($content);
 
-      //go through all new posts and check unprocessed
+      //go through all new posts and parse which are not in Database
       $db = Database::getConnection();
       for ($i = 0; $i < $posts->data->dist; ++$i) {
         $post = $posts->data->children[$i]->data;
         $existingPost = "SELECT id
                          FROM ppvr.posts
-                         WHERE id='".$post->id."';";
+                         WHERE id='".$post->id."' AND final=1;";
         $result = $db->query($existingPost);
 
         if ($result->num_rows == 0) {
           //only check posts that are at least 24h old
           $age = time() - $post->created_utc;
-          echo($age."\n");
-          if ($age >= 10*60*60 && $age <= 28*60*60) {
-            $GLOBALS['log'] .= "---------- parsing post ".$i." ----------\n";
-            echo("bin hier \n");
-            Reddit::parsePost($post, true);
+          if ($age >= 24*60*60 /*&& $age <= 28*60*60*/) {
+            $GLOBALS['log'] .= "---------- parsing final post ".$i." ----------\n";
+            Reddit::parsePost($post, 1);
           }
           else if ($age <= 24*60*60) {
-            //parsePost($posts->data->children[$i], false);
+            $GLOBALS['log'] .= "---------- parsing new post ".$i." ----------\n";
+            Reddit::parsePost($post, 0);
           }
-          //else $GLOBALS['log'] .= "-".$i.": ".$posts->data->children[$i]->data->url."\n"; //Debug
         }
       }
     }
 
     public function archive() {
+      $content=file_get_contents("https://ga.reddit.com/r/osugame/new.json?limit=100");
+      $posts = json_decode($content);
 
+      //go through all new posts and check unprocessed
+      $db = Database::getConnection();
+      for ($i = 0; $i < $posts->data->dist; ++$i) {
+        $post = $posts->data->children[$i]->data;
+        $existingPost = "SELECT f.id, t.id
+                         FROM ppvr.posts f, ppvr.posts_tmp t
+                         WHERE f.id='".$post->id."' OR t.id='".$post->id."';";
+        $result = $db->query($existingPost);
+
+        if ($result->num_rows == 0) {
+          //only check posts that are at least 24h old
+          $age = time() - $post->created_utc;
+          $final = 0;
+          if ($age >= 24*60*60 /*&& $age <= 28*60*60*/) {
+            $GLOBALS['log'] .= "---------- parsing post ".$i." ----------\n";
+            $final = 1;
+            Reddit::parsePost($post, $final);
+          }
+          else if ($age <= 24*60*60) {
+            Reddit::parsePost($post, $final);
+          }
+        }
+      }
     }
 
     private function parsePost($post, $final) {
@@ -50,24 +73,11 @@
           "title" => "**error**",
           "diff" => "**error**",
         );
-        /*$tok = strtok($postTitle, "|");
 
-        while (substr_count($tok, "osu!") > 1) {
-          $tok = strtok("|");
-        }
-        $parsedPost["player"] = $tok;
-        $tok = strtok("-");
-        $parsedPost["artist"] = $tok;
-        $tok = strtok("[");
-        $parsedPost["title"] = $tok;
-        $tok = strtok("]");
-        $parsedPost["diff"] = $tok;*/
         $parseError = false;
         $matches = array();
         //Title
-        $match = preg_match("/(.+) [\|丨].+-.+\[.+\]/", $postTitle, $matches);
-        echo("Title: ".count($matches)."\n");
-        var_dump($matches);
+        $match = preg_match("/(.+) *[\|丨].+-.+\[.+\]/", $postTitle, $matches);
         if ($match != FALSE && count($matches) == 2) {
           $parsedPost["player"] = $matches[1];
         }
@@ -77,13 +87,9 @@
 
         //map Data
         $tmpMap = "";
-        $match = preg_match("/.+[\|丨] (.+-.+\[.+\])/", $postTitle, $matches);
-        echo("mapData: ".count($matches)."\n");
-        echo("mapDataError: ".$match."\n");
-        var_dump($matches);
+        $match = preg_match("/.+[\|丨] *(.+-.+\[.+\])/", $postTitle, $matches);
         if ($match != FALSE && count($matches) == 2) {
           $tmpMap = $matches[1];
-          echo("tmpMap: ".$tmpMap."\n");
         }
         else {
           $parseError = true;
@@ -91,8 +97,6 @@
 
         //split map Data
         $match = preg_match("/(.+) - (.+?) \[(.+)\]/", $tmpMap, $matches);
-        echo("mapDataSplit: ".count($matches)."\n");
-        var_dump($matches);
         if ($match != FALSE && count($matches) == 4) {
           $parsedPost["artist"] = $matches[1];
           $parsedPost["title"] = $matches[2];
@@ -104,28 +108,16 @@
 
 
 
-        if ($final && $parseError == false) {
-          /* if this gets triggered, there is probably some additional info next to
-             the player, like "[osu!catch]" that wasn't recognized by the first
-             check a few lines above */
-          if (substr_count($parsedPost["player"], " ") > 1) {
-            $GLOBALS['log'] .= "fehler 1\n";
-            #postToDiscord($post, 1, $parsedPost);
-          }
-          else {
-            //check some additional stuff before marking as final
-            $GLOBALS['log'] .= "Original: ".$post->title."\n"; //Debug
-            $GLOBALS['log'] .= "Parsed: ".$parsedPost["player"]." | ".
-                            $parsedPost["artist"]. " - ".
-                            $parsedPost["title"]."\n";
-            Database::preparePost($post, $parsedPost);
-          }
-        }
-        else if ($parseError == false){
-          //Insert into DB without checking anything
+        if ($parseError == false) {
+          $GLOBALS['log'] .= "Original: ".$post->title."\n"; //Debug
+          //check some additional stuff before marking as final
+          $GLOBALS['log'] .= "Parsed: ".$parsedPost["player"]." | ".
+                          $parsedPost["artist"]. " - ".
+                          $parsedPost["title"]."\n";
+          Database::preparePost($post, $parsedPost, $final);
         }
         else {
-
+          Database::insertNewPostTmp($post, $parsedPost);
         }
       }
     }
