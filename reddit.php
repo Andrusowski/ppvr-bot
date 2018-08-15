@@ -11,19 +11,32 @@
         $post = $posts->data->children[$i]->data;
         $existingPost = "SELECT id
                          FROM ppvr.posts
-                         WHERE id='".$post->id."' AND final=1;";
+                         WHERE id='".$post->id."';";
         $result = $db->query($existingPost);
+
+        $age = time() - $post->created_utc;
 
         if ($result->num_rows == 0) {
           //only check posts that are at least 24h old
-          $age = time() - $post->created_utc;
-          if ($age >= 24*60*60 /*&& $age <= 28*60*60*/) {
+          if ($age >= 24*60*60) {
             $GLOBALS['log'] .= "---------- parsing final post ".$i." ----------\n";
             Reddit::parsePost($post, 1);
           }
-          else if ($age <= 24*60*60) {
+          else if ($age < 24*60*60) {
             $GLOBALS['log'] .= "---------- parsing new post ".$i." ----------\n";
             Reddit::parsePost($post, 0);
+          }
+        }
+        //update non-final post, if it already exists in the database
+        else {
+          $row = $result->fetch_assoc();
+          if (row["final"] == 0) {
+            if ($age >= 24*60*60) {
+              Database::updatePost($post, 1);
+            }
+            else {
+              Database::updatePost($post, 0);
+            }
           }
         }
       }

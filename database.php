@@ -53,13 +53,6 @@ class Database {
 
       if ($db->query($newPost) === TRUE) {
         $GLOBALS['log'] .= "Temporary Post added successfully";
-
-        $error = "\nParsed Data:".
-                 "\n  -Player: ".$parsedPost["player"].
-                 "\n  -Artist: ".$parsedPost["artist"].
-                 "\n  -Title: ".$parsedPost["title"].
-                 "\n  -Diff: ".$parsedPost["diff"]."\n";
-        $GLOBALS['log'] .= $error;
         #postToDiscord($post, 0, $parsedPost);
       }
       else {
@@ -70,26 +63,6 @@ class Database {
 
     public function preparePost($post, $parsedPost, $final) {
       $db = Database::getConnection();
-
-      //check if only an update for non-final post is needed
-      $existingPost = "SELECT id
-                       FROM ppvr.posts
-                       WHERE id='".$post->id."' AND final=0;";
-      $result = $db->query($existingPost);
-
-      if ($result->num_rows == 0) {
-        $updatedPost =
-        "UPDATE ppvr.posts
-         SET score=".$post->score."
-         WHERE id='".$post->id."' AND final=0;";
-        if ($db->query($newPost) === TRUE) {
-          $GLOBALS['log'] .= "Non-final post updated successfully\n";
-          #postToDiscord($post, 0, $parsedPost);
-        }
-        else {
-          $GLOBALS['log'] .= "Error: " . $newPost . "\n" . $db->error."\n";
-        }
-      }
 
       $apiUser = file_get_contents (
                    "https://osu.ppy.sh/api/get_user?k=".API_KEY.
@@ -182,49 +155,41 @@ class Database {
         }
       }
 
-      $existingPost = "SELECT id
-                       FROM ppvr.posts
-                       WHERE id='".$post->id."' AND final=0;";
-      $result = $db->query($existingPost);
+      $newPost =
+      "INSERT INTO ppvr.posts (id, player_id, map_artist, map_title, map_diff, author,
+                         score, ups, downs, gilded, created_utc, final)
+       VALUES ('".$post->id."', '"
+                 .$user[0]->user_id."', '"
+                 .htmlspecialchars_decode($db->real_escape_string($parsedPost["artist"]))."', '"
+                 .htmlspecialchars_decode($db->real_escape_string($parsedPost["title"]))."', '"
+                 .htmlspecialchars_decode($db->real_escape_string($parsedPost["diff"]))."', '"
+                 .$post->author."', "
+                 .$post->score.", "
+                 .$post->ups.", "
+                 .$post->downs.", "
+                 .$post->gilded.", "
+                 .$post->created_utc.", "
+                 .$final.");";
 
-      //add new temporary post if not existing
-      if ($result->num_rows == 0) {
-        $newPost =
-        "INSERT INTO ppvr.posts (id, player_id, map_artist, map_title, map_diff, author,
-                           score, ups, downs, created_utc, final)
-         VALUES ('".$post->id."', '"
-                   .$user[0]->user_id."', '"
-                   .htmlspecialchars_decode($db->real_escape_string($parsedPost["artist"]))."', '"
-                   .htmlspecialchars_decode($db->real_escape_string($parsedPost["title"]))."', '"
-                   .htmlspecialchars_decode($db->real_escape_string($parsedPost["diff"]))."', '"
-                   .$post->author."', '"
-                   .$post->score."', '"
-                   .$post->ups."', '"
-                   .$post->downs."', "
-                   .$post->created_utc.", "
-                   .$final.");";
-
-        if ($db->query($newPost) === TRUE) {
-          $GLOBALS['log'] .= "Post added successfully\n";
-          #postToDiscord($post, 0, $parsedPost);
-        }
-        else {
-          $GLOBALS['log'] .= "Error: " . $newPost . "\n" . $db->error."\n";
-        }
+      if ($db->query($newPost) === TRUE) {
+        $GLOBALS['log'] .= "Post added successfully\n";
+        #postToDiscord($post, 0, $parsedPost);
       }
-      //update non-final post if it exists
       else {
-        $newPost =
-        "UPDATE ppvr.posts_tmp
-         SET score=".$post->score."
-         WHERE id='".$post->id."' AND final=0;";
-        if ($db->query($newPost) === TRUE) {
-          $GLOBALS['log'] .= "Non-final post updated successfully\n";
-          #postToDiscord($post, 0, $parsedPost);
-        }
-        else {
-          $GLOBALS['log'] .= "Error: " . $newPost . "\n" . $db->error."\n";
-        }
+        $GLOBALS['log'] .= "Error: " . $newPost . "\n" . $db->error."\n";
+      }
+    }
+
+    public function updatePost($post, $final) {
+      $update = "UPDATE ppvr.posts
+                 SET score=".$post->score.", gilded=".$post->gilded.", final=".$final."
+                 WHERE id='".$post->id."' AND final=0;";
+      if ($db->query($newPost) === TRUE) {
+        $GLOBALS['log'] .= "Non-final post updated successfully\n";
+        #postToDiscord($post, 0, $parsedPost);
+      }
+      else {
+        $GLOBALS['log'] .= "Error: " . $newPost . "\n" . $db->error."\n";
       }
     }
 }
