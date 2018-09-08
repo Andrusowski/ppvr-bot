@@ -1,0 +1,736 @@
+
+**********2018-08-19T18:48:17.000935**********
+Connection successfull: localhost via TCP/IP
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+
+**********2018-08-19T18:48:29.284750**********
+Connection successfull: localhost via TCP/IP
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+
+**********2018-08-19T19:43:10.956845**********
+Connection successfull: localhost via TCP/IP
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+
+**********2018-08-19T19:59:38.800554**********
+Connection successfull: localhost via TCP/IP
+
+Title: Aspire 2018 Begins
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Original: FunOrange | KASAI HARCORES - Cycle Hit [Home Run] + HDPF (100.00%) FC SS #20 | 363pp
+Parsed: FunOrange  | KASAI HARCORES - Cycle Hit
+New player "FunOrange" added successfully
+Post added successfully
+
+Title: Osu cursor started randomly going towards the top left corner of the screen...
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Pen Tracking
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: menu_multiplayer_click.mp3
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfullyNon-final post updated successfully
+
+Title: yes
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: vr niggas flexin the hardest💯💯 😎👌👌👌👌
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: H610 Pro with TabletDriverGUI not working
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Downloaded osu at the Microsoft store
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: BEASTTROLL DONATED 1000 DOLLARS
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfullyNon-final post updated successfully
+
+Title: Sotarks finds K-Pop "trap"
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Mouse players flexing them headphone haters🎧🔇 🐁🔥
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Does anyone else have or has had a 'phase' where they are stuck in 4.5 star to low 5 star maps?
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Pring has changed his nickname to Aristia!
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: where can i get a pp cat?
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: minimal effort meme
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: osu! irl
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Snow halation but on my own FPS-perspective osu! mod
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: What makes this game fun?
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Funny moments with friends.
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: when the game speaks to your soul
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: help with osu!lazer on linux
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: osu! pink skin
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: #37 Wuhua FC "aleph2.0" Disconnected Hardkore
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Do you know any players who plaing hover?
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: How do I make PP display instead of that "score" thing?
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Removing XP-Pen g640 pen buttons?
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: RUINED
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: LOOKING FOR A COACH !
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: I need more maps...
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: 180 bpm streaming for 15 minutes solid but the benchmark stopped accepting input at 900 seconds...
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: [osu!] Top 5 Osu! tech players of all time! (by Adamqs)
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: What is your fav copypasta from this sub?
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfullyNon-final post updated successfully
+
+Title: FIRST OSU! INTERACTIVE QUEST // osu!: Become Mapper
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Should I consider switching to tablet?
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Different levels of greeting
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: can we make so cuttingedge users can join multis without supporter
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: ababababa
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Anyone know where i can get a cth or ctl 480?
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: flex on maPPer niGGas
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: When PC users flex harder^2
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: An hour of tapping
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: How much pp would Cookiezi have if he never got banned and pp farmed his whole playtime?
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: I HAVE JUST MADE A STARTLING DISCOVERY!!!!
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfullyNon-final post updated successfully
+
+Title: scrub.
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: low quality meme
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: just passed my highest combo then i accidentally pressed pause and hit quit. what a nice day.
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Headphone users flexing even harder 😎👌👌💯💯💯✅
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: An automatic beatmap generator using Tensorflow / Deep Learning by [CSGA]Ar3sgice
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: First skin Is it good?
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: anyone else accidentally double tap when alternating?
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: ugly ass pippi is back!
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: A cancerous streamer
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Change my 5-digit opinions
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: LMAO iM Dyin Rn😂😂😂😂
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfullyNon-final post updated successfully
+
+Title: why are some of my maps broken
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfullyNon-final post updated successfully
+
+Title: P e r f e c t . No more no more ohio state university lads
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Peppy goes smooth brain module
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Top 10 densest ranked mania 7K maps
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: osu! In a Nutshell
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Quick little survey for mouse my fellow mouse players.
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Going to switch from a mouse to a H610 Pro, how do I go about setting it up?
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: I'm looking for a map with lots of 1 and 2 combos
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Black Rover at 6 am on a road
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: My profile says that I "once again chosen to support osu" even though I have only bought osu!supporter once?
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Why did I not get the 7* pass achievement for this?
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Extremely tardy post of my Pippi itabag I wore at Anime Expo
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Osu is like guitar hero, but instead of feeling like a rock star, you just feel like a disappointment.
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: WHEN KEYBOARD NIGGAS FLEX HARDER 😤💯🔥🔥👌👌👌👌 owo
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: haha epic sokrats meme!
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfullyNon-final post updated successfully
+
+Title: who is morgan?
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Having the hardest time putting any of these mechanical switches back in. After an hour of figuring out how to take them out i tried to put other ones in and ended up bending some prongs and breaking one. Seems to be a problem putting them in the right side but the left one is just fine.
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: when mouse niggas flex back infinitely harder 🔥
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: The reason I quit osu for Beat Saber
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: When tablet niggas flex back harder 😎
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Help finding a map
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: 4K skin off centered
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: r/osugame sings honesty
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Guess the beatmap, but there are only hitsounds and patterns lol. This is just a little game. It’s fun.
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: dear mr sotarks
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Just bought this osu keypad and want to replace the switches for these red ones but dont know how. Any help?
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: legendre has sumbitted a liveplay!
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Click the circles ( ͡° ͜ʖ ͡°)
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Mestre3224 - Caramelo da desgraca [8.17*] Mapped by Mismagius (Blue Dragon) is qualified, again!
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: high effort meme
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfullyNon-final post updated successfully
+Non-final post updated successfully
+
+Title: August 18: Weekly achievement and help thread
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Could this be cookiezi childhood story!?
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: Mathi is streaming with the new monitor!
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfullyNon-final post updated successfully
+
+Title: I ranked the countries in weebiness
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Title: osu has taken over every single video file on my pc without me changing anything
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+**********2018-08-19T20:01:10.571016**********
+Connection successfull: localhost via TCP/IP
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+
+Title: (Unnoticed?) Flaven | Chrono Diver -PENDULUMs- (USAO remix) [Insane] 99.74% +DT FC #2 (First DT FC on leaderboards)
+Parsed Data:
+  -Player: (Unnoticed?) Flaven 
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfullyNon-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+
+Title: Bonk (#1700) ZUN remixed by LeaF - Resurrection Spell [VOLCANO] +HR (98.83%) FC #15 | 483pp | 85.88 UR
+Parsed Data:
+  -Player: **error**
+  -Artist: **error**
+  -Title: **error**
+  -Diff: **error**
+Temporary Post added successfully
+Original: MightyDoc (#708 PRODIGY) | THE ORAL CIGARETTES - Amy [Reflection] +HD,DT (7.71*) 96.21% 738/1746 4xmiss 103.43 cv. UR 288pp #3 on (HD)DT leaderboards!
+Parsed: MightyDoc (#708 PRODIGY)  | THE ORAL CIGARETTES - Amy
+
+Title: MightyDoc (#708 PRODIGY) | THE ORAL CIGARETTES - Amy [Reflection] +HD,DT (7.71*) 96.21% 738/1746 4xmiss 103.43 cv. UR 288pp #3 on (HD)DT leaderboards!
+Parsed Data:
+  -Player: MightyDoc (#708 PRODIGY) 
+  -Artist: THE ORAL CIGARETTES
+  -Title: Amy
+  -Diff: Reflection
+Temporary Post added successfully
+**********2018-08-19T20:02:22.528368**********
+Connection successfull: localhost via TCP/IP
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully
+Non-final post updated successfully

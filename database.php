@@ -38,10 +38,11 @@ class Database {
       $db = Database::getConnection();
 
       $newPost =
-      "INSERT INTO ppvr.posts_tmp (id, title, author)
+      "INSERT INTO ppvr.tmpposts (id, title, author, score)
        VALUES ('".$post->id."', '"
                  .htmlspecialchars_decode($db->real_escape_string($post->title))."', '"
-                 .$post->author."');";
+                 .$post->author."', '"
+                 .$post->score.");";
 
       $error ="\nTitle: ".$post->title.
               "\nParsed Data:".
@@ -94,15 +95,15 @@ class Database {
         $resultAlias = $db->query($dbUserAlias);
 
         if ($resultAlias->num_rows == 1) {
-          $resultUserAlias = $result->fetch_assoc();
+          $resultUserAlias = $resultAlias->fetch_assoc();
           $apiUserAlias = file_get_contents (
                             "https://osu.ppy.sh/api/get_user?k=".API_KEY.
-                            "&u=".$resultUserAlias["alias"]."&type=string"
+                            "&u=".$resultUserAlias["name"]."&type=string"
                           );
           $userAlias = json_decode($apiUserAlias);
           if ($userAlias != null)
           {
-            Database::insertNewPost($post, $parsedPost, $userAlias, $result, $final);
+            Database::insertNewPost($post, $parsedPost, $userAlias, $resultAlias, $final);
           }
         }
         else {
@@ -151,7 +152,7 @@ class Database {
          $resultUser["name"]."\n";
         }
         else {
-         $GLOBALS['log'] .= "Error: " . $updatePlayer . "\n" . $db->error;
+         echo("Error: " . $updatePlayer . "\n" . $db->error);
         }
       }
 
@@ -165,8 +166,8 @@ class Database {
                  .htmlspecialchars_decode($db->real_escape_string($parsedPost["diff"]))."', '"
                  .$post->author."', "
                  .$post->score.", "
-                 .$post->ups.", "
-                 .$post->downs.", "
+                 .round($post->score * $post->upvote_ratio).", "
+                 .round($post->score * (1 - $post->upvote_ratio)).", "
                  .$post->gilded.", "
                  .$post->created_utc.", "
                  .$final.");";
@@ -176,20 +177,21 @@ class Database {
         #postToDiscord($post, 0, $parsedPost);
       }
       else {
-        $GLOBALS['log'] .= "Error: " . $newPost . "\n" . $db->error."\n";
+        echo("Error: " . $newPost . "\n" . $db->error."\n");
       }
     }
 
     public function updatePost($post, $final) {
+      $db = Database::getConnection();
       $update = "UPDATE ppvr.posts
-                 SET score=".$post->score.", gilded=".$post->gilded.", final=".$final."
+                 SET score=".$post->score.", ups=".round($post->score * $post->upvote_ratio).", downs=".round($post->score * (1 - $post->upvote_ratio)).", gilded=".$post->gilded.", final=".$final."
                  WHERE id='".$post->id."' AND final=0;";
-      if ($db->query($newPost) === TRUE) {
+      if ($db->query($update) === TRUE) {
         $GLOBALS['log'] .= "Non-final post updated successfully\n";
         #postToDiscord($post, 0, $parsedPost);
       }
       else {
-        $GLOBALS['log'] .= "Error: " . $newPost . "\n" . $db->error."\n";
+        $GLOBALS['log'] .= "Error: " . $update . "\n" . $db->error."\n";
       }
     }
 }

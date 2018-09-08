@@ -1,36 +1,41 @@
 <?php
   class Reddit {
 
+    private static $lastParse;
+
     public function new() {
-      $content=file_get_contents("https://ga.reddit.com/r/osugame/new.json?limit=100");
+      #$content=file_get_contents("https://ga.reddit.com/r/osugame/new.json?limit=100");
+	    $content=file_get_contents("https://ga.reddit.com/r/osugame/search.json?q=flair%3AGameplay&sort=new&restrict_sr=on&t=all");
       $posts = json_decode($content);
 
-      //go through all new posts and parse which are not in Database
+      //go through all new posts and parse which are not in the Database
       $db = Database::getConnection();
       for ($i = 0; $i < $posts->data->dist; ++$i) {
         $post = $posts->data->children[$i]->data;
-        $existingPost = "SELECT id
-                         FROM ppvr.posts
-                         WHERE id='".$post->id."';";
+        $existingPost = "SELECT id, final "
+                      . "FROM ppvr.posts "
+                      . "WHERE id='".$post->id."' "
+                      . "UNION "
+                      . "SELECT id, author "
+                      . "FROM ppvr.tmpposts "
+                      . "WHERE id='".$post->id."';";
         $result = $db->query($existingPost);
 
         $age = time() - $post->created_utc;
 
         if ($result->num_rows == 0) {
-          //only check posts that are at least 24h old
-          if ($age >= 24*60*60) {
-            $GLOBALS['log'] .= "---------- parsing final post ".$i." ----------\n";
-            Reddit::parsePost($post, 1);
+          //determine if post is final (>48h old)
+          if ($age >= 48*60*60) {
+            Reddit::parsePost($post, 1, 0);
           }
-          else if ($age < 24*60*60) {
-            $GLOBALS['log'] .= "---------- parsing new post ".$i." ----------\n";
-            Reddit::parsePost($post, 0);
+          else if ($age < 48*60*60) {
+            Reddit::parsePost($post, 0, 0);
           }
         }
         //update non-final post, if it already exists in the database
         else {
           $row = $result->fetch_assoc();
-          if (row["final"] == 0) {
+          if ($row["final"] == 0) {
             if ($age >= 24*60*60) {
               Database::updatePost($post, 1);
             }
@@ -42,36 +47,48 @@
       }
     }
 
+
     public function archive() {
-      $content=file_get_contents("https://ga.reddit.com/r/osugame/new.json?limit=100");
-      $posts = json_decode($content);
-
-      //go through all new posts and check unprocessed
+      //go through all new posts and parse which are not in Database
       $db = Database::getConnection();
-      for ($i = 0; $i < $posts->data->dist; ++$i) {
-        $post = $posts->data->children[$i]->data;
-        $existingPost = "SELECT f.id, t.id
-                         FROM ppvr.posts f, ppvr.posts_tmp t
-                         WHERE f.id='".$post->id."' OR t.id='".$post->id."';";
-        $result = $db->query($existingPost);
+      $after = 0;
+      self::$lastParse = time();
 
-        if ($result->num_rows == 0) {
-          //only check posts that are at least 24h old
+      while ($after < time() - 60*60) { //stop archiving, when posts are younger than an hour
+        $content = file_get_contents("https://api.pushshift.io/reddit/submission/search?subreddit=osugame&sort=asc&limit=100&after=".$after);
+        $posts = json_decode($content);
+        echo date('d/m/Y', $after)."\n";
+
+        for ($i = 0; $i < sizeof($posts->data); ++$i) {
+          $post = $posts->data[$i];
+          $existingPost = "SELECT id, final "
+                        . "FROM ppvr.posts "
+                        . "WHERE id='".$post->id."' "
+                        . "UNION "
+                        . "SELECT id, author "
+                        . "FROM ppvr.tmpposts "
+                        . "WHERE id='".$post->id."';";
+          $result = $db->query($existingPost);
+
           $age = time() - $post->created_utc;
-          $final = 0;
-          if ($age >= 24*60*60 /*&& $age <= 28*60*60*/) {
-            $GLOBALS['log'] .= "---------- parsing post ".$i." ----------\n";
-            $final = 1;
-            Reddit::parsePost($post, $final);
+
+          if ($result->num_rows == 0) {
+            //determine if post is final (>48h old)
+            if ($age >= 48*60*60) {
+              Reddit::parsePost($post, 1, 1);
+            }
+            else if ($age < 48*60*60) {
+              Reddit::parsePost($post, 0, 1);
+            }
           }
-          else if ($age <= 24*60*60) {
-            Reddit::parsePost($post, $final);
-          }
+
+          $after = $post->created_utc;
         }
       }
     }
 
-    private function parsePost($post, $final) {
+
+    private function parsePost($post, $final, $archive) {
       /* check for characteristic characters from the already established format
          Player Name | Song Artist - Song Title [Diff Name] +Mods */
       $postTitle = $post->title;
@@ -90,7 +107,7 @@
         $parseError = false;
         $matches = array();
         //Title
-        $match = preg_match("/(.+) *[\|丨].+-.+\[.+\]/", $postTitle, $matches);
+        $match = preg_match("/(.+)\s*[\|丨].+-.+?\[.+?\]/", $postTitle, $matches);
         if ($match != FALSE && count($matches) == 2) {
           $parsedPost["player"] = $matches[1];
         }
@@ -100,7 +117,7 @@
 
         //map Data
         $tmpMap = "";
-        $match = preg_match("/.+[\|丨] *(.+-.+\[.+\])/", $postTitle, $matches);
+        $match = preg_match("/.+[\|丨]\s*(.+-.+\[.+\])/", $postTitle, $matches);
         if ($match != FALSE && count($matches) == 2) {
           $tmpMap = $matches[1];
         }
@@ -109,7 +126,7 @@
         }
 
         //split map Data
-        $match = preg_match("/(.+) - (.+?) \[(.+)\]/", $tmpMap, $matches);
+        $match = preg_match("/(.+)\s-\s(.+?)\s\[(.+?)\]/", $tmpMap, $matches);
         if ($match != FALSE && count($matches) == 4) {
           $parsedPost["artist"] = $matches[1];
           $parsedPost["title"] = $matches[2];
@@ -120,19 +137,33 @@
         }
 
 
-
         if ($parseError == false) {
-          $GLOBALS['log'] .= "Original: ".$post->title."\n"; //Debug
+          echo("\nOriginal: ".$post->title."\n"); //Debug
           //check some additional stuff before marking as final
-          $GLOBALS['log'] .= "Parsed: ".$parsedPost["player"]." | ".
+          echo("Parsed: ".$parsedPost["player"]." | ".
                           $parsedPost["artist"]. " - ".
-                          $parsedPost["title"]."\n";
+                          $parsedPost["title"].
+                          $parsedPost["diff"]."\n");
+
+          //take a break to prevent osu!api spam
+          while (self::$lastParse == time()) {
+            //wait
+          }
+          self::$lastParse = time();
+
+          $content = file_get_contents("https://www.reddit.com/r/osugame/comments/".$post->id.".json");
+          $post = json_decode($content)[0]->data->children[0]->data;
+
           Database::preparePost($post, $parsedPost, $final);
+
+          return true;
         }
         else {
           Database::insertNewPostTmp($post, $parsedPost);
         }
       }
+
+      return false;
     }
   }
 ?>

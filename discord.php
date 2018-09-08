@@ -36,7 +36,7 @@ class Discord {
       $datatmp["embeds"][0]["description"] = "final score: "
                                              .$post->score." ("
                                              .$post->ups." ⇧/"
-                                             .$post->downs." ⇩)";
+                                             .$post->upvote_ratio." ⇩)";
       $datatmp["embeds"][0]["author"]["name"] = "New post added:";
     }
     else {
@@ -48,7 +48,7 @@ class Discord {
                                             "diff   : ".$parsedPost["diff"]."\n".
                                             "score  : ".$post->score."\n".
                                             "ups    : ".$post->ups."\n".
-                                            "downs  : ".$post->downs."\n".
+                                            "upvote_ratio  : ".$post->upvote_ratio."\n".
                                             "created: ".$post->created_utc."\n".
                                             "author : ".$post->author."\n";
 

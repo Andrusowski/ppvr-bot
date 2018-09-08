@@ -1,0 +1,346 @@
+
+**********2018-08-21T16:17:37.348938**********
+Connection successfull: localhost via TCP/IP
+
+Original: Hectique | GYZE - HONESTY [DISHONEST] 98.79% FC #32 600 PP | 92.72 UR | Rank #985 (#1072 Before FC)!!
+Parsed: Hectique  | GYZE - HONESTY
+Error: INSERT INTO ppvr.players (id, name, alias)
+       VALUES ('5298911', 'Hectique', NULL);
+Column 'alias' cannot be null
+Player "Hectique" updated successfully! Old name:
+Error: INSERT INTO ppvr.posts (id, player_id, map_artist, map_title, map_diff, author,
+                         score, ups, upvote_ratio, gilded, created_utc, final)
+       VALUES ('9941ke', '5298911', 'GYZE', 'HONESTY', 'DISHONEST', 'ThePro365', 7, 7, 0, 0, 1534864833, 0);
+Cannot add or update a child row: a foreign key constraint fails (`ppvr`.`posts`, CONSTRAINT `posts_player_id_foreign` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`))
+
+Original: Piggey | Traktion - The Near Distant Future [Lapse] +HDDT 2xmiss 2190/2677 (98.51%) #3 (HD)DT 442pp | Highest (HD)DT acc!
+Parsed: Piggey  | Traktion - The Near Distant Future
+Error: INSERT INTO ppvr.players (id, name, alias)
+       VALUES ('4163860', 'Piggey', NULL);
+Column 'alias' cannot be null
+Player "Piggey" updated successfully! Old name:
+Error: INSERT INTO ppvr.posts (id, player_id, map_artist, map_title, map_diff, author,
+                         score, ups, upvote_ratio, gilded, created_utc, final)
+       VALUES ('993stw', '4163860', 'Traktion', 'The Near Distant Future', 'Lapse', 'anoymaly2152', 42, 42, 0, 0, 1534863125, 0);
+Cannot add or update a child row: a foreign key constraint fails (`ppvr`.`posts`, CONSTRAINT `posts_player_id_foreign` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`))
+
+Original: mcy4 | Vickeblanka - Black Rover (TV Size) [Extra] + HDDT (mapset by Sotarks, 8.89*) (98.32%) 470/534x 4xMiss | 647pp (839 if FC) | 93.81 cv. UR | His new top play!
+Parsed: mcy4  | Vickeblanka - Black Rover (TV Size)
+Error: INSERT INTO ppvr.players (id, name, alias)
+       VALUES ('2165650', 'mcy4', NULL);
+Column 'alias' cannot be null
+Player "mcy4" updated successfully! Old name:
+Error: INSERT INTO ppvr.posts (id, player_id, map_artist, map_title, map_diff, author,
+                         score, ups, upvote_ratio, gilded, created_utc, final)
+       VALUES ('9937bz', '2165650', 'Vickeblanka', 'Black Rover (TV Size)', 'Extra', 'Siarry', 60, 60, 0, 0, 1534858691, 0);
+Cannot add or update a child row: a foreign key constraint fails (`ppvr`.`posts`, CONSTRAINT `posts_player_id_foreign` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`))
+
+Original: a_Blue | Aitsuki Nakuru - Monochrome Butterfly [Lami's Extra] +HDDT (mapset by Sotarks | 8.23*) | (96.99%) FC #6 | 621pp | cv.UR 83.64
+Parsed: a_Blue  | Aitsuki Nakuru - Monochrome Butterfly
+Error: INSERT INTO ppvr.players (id, name, alias)
+       VALUES ('5645667', 'a_Blue', NULL);
+Column 'alias' cannot be null
+Player "a_Blue" updated successfully! Old name:
+Error: INSERT INTO ppvr.posts (id, player_id, map_artist, map_title, map_diff, author,
+                         score, ups, upvote_ratio, gilded, created_utc, final)
+       VALUES ('9927k7', '5645667', 'Aitsuki Nakuru', 'Monochrome Butterfly', 'Lami\'s Extra', 'Odkrywacz', 37, 37, 0, 0, 1534849207, 0);
+Cannot add or update a child row: a foreign key constraint fails (`ppvr`.`posts`, CONSTRAINT `posts_player_id_foreign` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`))
+
+Original: _RyuK | HoneyWorks - Miraizu feat.Aida Miou(CV:Toyosaki Aki) [Special] (7.9*) + HDDT FC 97.83% #3 614pp | 106.22 cv. UR
+Parsed: _RyuK  | HoneyWorks - Miraizu feat.Aida Miou(CV:Toyosaki Aki)
+Error: INSERT INTO ppvr.players (id, name, alias)
+       VALUES ('6304246', '_RyuK', NULL);
+Column 'alias' cannot be null
+Player "_RyuK" updated successfully! Old name:
+Error: INSERT INTO ppvr.posts (id, player_id, map_artist, map_title, map_diff, author,
+                         score, ups, upvote_ratio, gilded, created_utc, final)
+       VALUES ('991olw', '6304246', 'HoneyWorks', 'Miraizu feat.Aida Miou(CV:Toyosaki Aki)', 'Special', 'bozenga', 161, 161, 0, 0, 1534843283, 0);
+Cannot add or update a child row: a foreign key constraint fails (`ppvr`.`posts`, CONSTRAINT `posts_player_id_foreign` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`))
+
+Original: (old score) lain | RazQ - International Wrestling Festival [Challenge -Gay Bar-] +HDHR 97.52% 264/287 1xmiss - CS7.8 6.8* map
+Parsed: (old score) lain  | RazQ - International Wrestling Festival
+
+Title: (old score) lain | RazQ - International Wrestling Festival [Challenge -Gay Bar-] +HDHR 97.52% 264/287 1xmiss - CS7.8 6.8* map
+Parsed Data:
+  -Player: (old score) lain 
+  -Artist: RazQ
+  -Title: International Wrestling Festival
+  -Diff: Challenge -Gay Bar-
+Temporary Post added successfully
+Original: EGG0001 [osu!taiko] | LOVED DJ Noriken feat. Nanahira - Sweet Wishes (katacheh) [LastWish] FC | 99.90% 4x 100
+Parsed: EGG0001 [osu!taiko]  | LOVED DJ Noriken feat. Nanahira - Sweet Wishes (katacheh)
+
+Title: EGG0001 [osu!taiko] | LOVED DJ Noriken feat. Nanahira - Sweet Wishes (katacheh) [LastWish] FC | 99.90% 4x 100
+Parsed Data:
+  -Player: EGG0001 [osu!taiko] 
+  -Artist: LOVED DJ Noriken feat. Nanahira
+  -Title: Sweet Wishes (katacheh)
+  -Diff: LastWish
+Temporary Post added successfully
+Original: Informous | Muzzy - Endgame [Gameover] (Secretpipe mapset | 7.92*) +HD,DT (98.99%) 1394/1542 2m | 631pp (719 if FC) 83.53 cv. UR
+Parsed: Informous  | Muzzy - Endgame
+Error: INSERT INTO ppvr.players (id, name, alias)
+       VALUES ('4734244', 'Informous', NULL);
+Column 'alias' cannot be null
+Player "Informous" updated successfully! Old name:
+Error: INSERT INTO ppvr.posts (id, player_id, map_artist, map_title, map_diff, author,
+                         score, ups, upvote_ratio, gilded, created_utc, final)
+       VALUES ('98yu60', '4734244', 'Muzzy', 'Endgame', 'Gameover', 'Pequu', 369, 369, 0, 0, 1534813167, 0);
+Cannot add or update a child row: a foreign key constraint fails (`ppvr`.`posts`, CONSTRAINT `posts_player_id_foreign` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`))
+
+Original: Informous | UNDEAD CORPORATION - Yoru Naku Usagi wa Yume o Miru [Lunatic] (Smoothie mapset | 7.14*) +HD,DT (98.31%) FC #1 | 488pp 108.26 cv. UR
+Parsed: Informous  | UNDEAD CORPORATION - Yoru Naku Usagi wa Yume o Miru
+Error: INSERT INTO ppvr.players (id, name, alias)
+       VALUES ('4734244', 'Informous', NULL);
+Column 'alias' cannot be null
+Player "Informous" updated successfully! Old name:
+Error: INSERT INTO ppvr.posts (id, player_id, map_artist, map_title, map_diff, author,
+                         score, ups, upvote_ratio, gilded, created_utc, final)
+       VALUES ('98yo01', '4734244', 'UNDEAD CORPORATION', 'Yoru Naku Usagi wa Yume o Miru', 'Lunatic', 'Pequu', 235, 235, 0, 0, 1534810306, 0);
+Cannot add or update a child row: a foreign key constraint fails (`ppvr`.`posts`, CONSTRAINT `posts_player_id_foreign` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`))
+
+Original: Marek Marucha | Tapimiru - Hakkensha wa Watashi (TV Size) [Sotarks' Fantasy] (Agatsu mapset | 8.13*) +HD,DT (87.33%) FC #116 | 521pp 146 cv. UR
+Parsed: Marek Marucha  | Tapimiru - Hakkensha wa Watashi (TV Size)
+Error: INSERT INTO ppvr.players (id, name, alias)
+       VALUES ('2395405', 'Marek Marucha', NULL);
+Column 'alias' cannot be null
+Player "Marek Marucha" updated successfully! Old name:
+Error: INSERT INTO ppvr.posts (id, player_id, map_artist, map_title, map_diff, author,
+                         score, ups, upvote_ratio, gilded, created_utc, final)
+       VALUES ('98yg77', '2395405', 'Tapimiru', 'Hakkensha wa Watashi (TV Size)', 'Sotarks\' Fantasy', 'Astar-', 40, 40, 0, 0, 1534806747, 0);
+Cannot add or update a child row: a foreign key constraint fails (`ppvr`.`posts`, CONSTRAINT `posts_player_id_foreign` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`))
+
+Original: Cookiezi | DJ TOTTO - Crystalia [first half suc] (mapset by None1637 | 9.33*) +HD (98.33%) | 2xMiss | 76.37 UR
+Parsed: Cookiezi  | DJ TOTTO - Crystalia
+Error: INSERT INTO ppvr.players (id, name, alias)
+       VALUES ('124493', 'Cookiezi', NULL);
+Column 'alias' cannot be null
+Player "Cookiezi" updated successfully! Old name:
+Error: INSERT INTO ppvr.posts (id, player_id, map_artist, map_title, map_diff, author,
+                         score, ups, upvote_ratio, gilded, created_utc, final)
+       VALUES ('98yd7d', '124493', 'DJ TOTTO', 'Crystalia', 'first half suc', 'Atmozfears', 86, 86, 0, 0, 1534805785, 0);
+Cannot add or update a child row: a foreign key constraint fails (`ppvr`.`posts`, CONSTRAINT `posts_player_id_foreign` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`))
+
+Original: filsdelama | Eguchi Takahiro - silver temple [Insane] +HDDT SS #1 | 437pp | 65.92cv. UR
+Parsed: filsdelama  | Eguchi Takahiro - silver temple
+Error: INSERT INTO ppvr.players (id, name, alias)
+       VALUES ('2831793', 'filsdelama', NULL);
+Column 'alias' cannot be null
+Player "filsdelama" updated successfully! Old name:
+Error: INSERT INTO ppvr.posts (id, player_id, map_artist, map_title, map_diff, author,
+                         score, ups, upvote_ratio, gilded, created_utc, final)
+       VALUES ('98y3ou', '2831793', 'Eguchi Takahiro', 'silver temple', 'Insane', 'number1xiifan', 32, 32, 0, 0, 1534803775, 0);
+Cannot add or update a child row: a foreign key constraint fails (`ppvr`.`posts`, CONSTRAINT `posts_player_id_foreign` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`))
+
+Original: Cookiezi | siromaru - Absurd Gaff [Maniac] +HD 98.66% FC — first FC, #1 LOVED
+Parsed: Cookiezi  | siromaru - Absurd Gaff
+Error: INSERT INTO ppvr.players (id, name, alias)
+       VALUES ('124493', 'Cookiezi', NULL);
+Column 'alias' cannot be null
+Player "Cookiezi" updated successfully! Old name:
+Error: INSERT INTO ppvr.posts (id, player_id, map_artist, map_title, map_diff, author,
+                         score, ups, upvote_ratio, gilded, created_utc, final)
+       VALUES ('98xyv1', '124493', 'siromaru', 'Absurd Gaff', 'Maniac', 'Jacezero', 169, 169, 0, 0, 1534802770, 0);
+Cannot add or update a child row: a foreign key constraint fails (`ppvr`.`posts`, CONSTRAINT `posts_player_id_foreign` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`))
+
+Original: Mathi | HoneyWorks - Akatsuki Zukuyo [Taeyang's Extra] + HDDT (mapset by [C u r i], 8.38*) (98.20%) 796/1328x 2xSb | 569pp (812 if FC) | 83.01 cv. UR | Best (HD)DT acc
+Parsed: Mathi  | HoneyWorks - Akatsuki Zukuyo
+Error: INSERT INTO ppvr.players (id, name, alias)
+       VALUES ('5339515', 'Mathi', NULL);
+Column 'alias' cannot be null
+Player "Mathi" updated successfully! Old name:
+Error: INSERT INTO ppvr.posts (id, player_id, map_artist, map_title, map_diff, author,
+                         score, ups, upvote_ratio, gilded, created_utc, final)
+       VALUES ('98xtlu', '5339515', 'HoneyWorks', 'Akatsuki Zukuyo', 'Taeyang\'s Extra] + HDDT (mapset by [C u r i', 'Siarry', 193, 193, 0, 0, 1534801677, 0);
+Cannot add or update a child row: a foreign key constraint fails (`ppvr`.`posts`, CONSTRAINT `posts_player_id_foreign` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`))
+
+Original: Mathi | Tapimiru - Hakkensha wa Watashi (TV Size) [Sotarks' Fantasy] (Agatsu mapset | 8.13*) +HD,DT (99.11%) FC #1 | 649pp 65.97 cv. UR
+Parsed: Mathi  | Tapimiru - Hakkensha wa Watashi (TV Size)
+Error: INSERT INTO ppvr.players (id, name, alias)
+       VALUES ('5339515', 'Mathi', NULL);
+Column 'alias' cannot be null
+Player "Mathi" updated successfully! Old name:
+Error: INSERT INTO ppvr.posts (id, player_id, map_artist, map_title, map_diff, author,
+                         score, ups, upvote_ratio, gilded, created_utc, final)
+       VALUES ('98xkgn', '5339515', 'Tapimiru', 'Hakkensha wa Watashi (TV Size)', 'Sotarks\' Fantasy', 'Pequu', 127, 127, 0, 0, 1534799820, 0);
+Cannot add or update a child row: a foreign key constraint fails (`ppvr`.`posts`, CONSTRAINT `posts_player_id_foreign` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`))
+
+Original: Vaxei | Yousei Teikoku - Torikago [Extra] +HD,DT (99.48%) FC #1 | 644pp | 70.52cv. UR
+Parsed: Vaxei  | Yousei Teikoku - Torikago
+Error: INSERT INTO ppvr.players (id, name, alias)
+       VALUES ('4787150', 'Vaxei', NULL);
+Column 'alias' cannot be null
+Player "Vaxei" updated successfully! Old name:
+Error: INSERT INTO ppvr.posts (id, player_id, map_artist, map_title, map_diff, author,
+                         score, ups, upvote_ratio, gilded, created_utc, final)
+       VALUES ('98xd2r', '4787150', 'Yousei Teikoku', 'Torikago', 'Extra', 'Skillosu', 337, 337, 0, 0, 1534798313, 0);
+Cannot add or update a child row: a foreign key constraint fails (`ppvr`.`posts`, CONSTRAINT `posts_player_id_foreign` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`))
+
+Original: Ceptin | Luschka - Kami no Kotoba [Jounzan's Special] 8.88* (85.13%) 3rd DT(+HD) pass 105xmiss
+Parsed: Ceptin  | Luschka - Kami no Kotoba
+Error: INSERT INTO ppvr.players (id, name, alias)
+       VALUES ('3221564', 'Ceptin', NULL);
+Column 'alias' cannot be null
+Player "Ceptin" updated successfully! Old name:
+Error: INSERT INTO ppvr.posts (id, player_id, map_artist, map_title, map_diff, author,
+                         score, ups, upvote_ratio, gilded, created_utc, final)
+       VALUES ('98v9uz', '3221564', 'Luschka', 'Kami no Kotoba', 'Jounzan\'s Special', 'DomanEQ', 37, 37, 0, 0, 1534783878, 0);
+Cannot add or update a child row: a foreign key constraint fails (`ppvr`.`posts`, CONSTRAINT `posts_player_id_foreign` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`))
+
+Original: Emilia | Shuki Levy - The Super Mario Bros. Super Show! [Nold's Style] +HD,DT 98.04% FC #1 400pp
+Parsed: Emilia  | Shuki Levy - The Super Mario Bros. Super Show!
+Error: INSERT INTO ppvr.players (id, name, alias)
+       VALUES ('2003326', 'Emilia', NULL);
+Column 'alias' cannot be null
+Player "Emilia" updated successfully! Old name:
+Error: INSERT INTO ppvr.posts (id, player_id, map_artist, map_title, map_diff, author,
+                         score, ups, upvote_ratio, gilded, created_utc, final)
+       VALUES ('98ut1o', '2003326', 'Shuki Levy', 'The Super Mario Bros. Super Show!', 'Nold\'s Style', 'SkuLL00700', 49, 49, 0, 0, 1534780625, 1);
+Cannot add or update a child row: a foreign key constraint fails (`ppvr`.`posts`, CONSTRAINT `posts_player_id_foreign` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`))
+
+Original: uyghti | Hagumi Nishizawa - My Hero! Up to you! [My Hero!] + DT (mapset by Xexxar | 8.00*) | (99.38%) FC #46 | 619pp | cv.UR 71.98
+Parsed: uyghti  | Hagumi Nishizawa - My Hero! Up to you!
+Error: INSERT INTO ppvr.players (id, name, alias)
+       VALUES ('3641404', 'uyghti', NULL);
+Column 'alias' cannot be null
+Player "uyghti" updated successfully! Old name:
+Error: INSERT INTO ppvr.posts (id, player_id, map_artist, map_title, map_diff, author,
+                         score, ups, upvote_ratio, gilded, created_utc, final)
+       VALUES ('98urs6', '3641404', 'Hagumi Nishizawa', 'My Hero! Up to you!', 'My Hero!', 'Odkrywacz', 166, 166, 0, 0, 1534780370, 1);
+Cannot add or update a child row: a foreign key constraint fails (`ppvr`.`posts`, CONSTRAINT `posts_player_id_foreign` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`))
+
+Original: DenierNezzar | Renard - Rainbow Dash Likes Girls (Stay Gay Pony Girl) [Holy Shit! It's Rainbow Dash!] | (mapset by ztrot, 6.99*) | 98.14% | 817x | 5x miss | #6 on map
+Parsed: DenierNezzar  | Renard - Rainbow Dash Likes Girls (Stay Gay Pony Girl)
+Error: INSERT INTO ppvr.players (id, name, alias)
+       VALUES ('126144', 'DenierNezzar', NULL);
+Column 'alias' cannot be null
+Player "DenierNezzar" updated successfully! Old name:
+Error: INSERT INTO ppvr.posts (id, player_id, map_artist, map_title, map_diff, author,
+                         score, ups, upvote_ratio, gilded, created_utc, final)
+       VALUES ('98u039', '126144', 'Renard', 'Rainbow Dash Likes Girls (Stay Gay Pony Girl)', 'Holy Shit! It\'s Rainbow Dash!', 'Edythator', 49, 49, 0, 0, 1534775016, 1);
+Cannot add or update a child row: a foreign key constraint fails (`ppvr`.`posts`, CONSTRAINT `posts_player_id_foreign` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`))
+
+Original: Informous | Imperial Circus Dead Decadence - Yomi yori Kikoyu, Koukoku no Tou to Honoo no Shoujo. [Kyouaku] (mapset by DoKito | 8.26*) | (95.30%) 1110/4353x 32xMiss #20 | 123.54 UR
+Parsed: Informous  | Imperial Circus Dead Decadence - Yomi yori Kikoyu, Koukoku no Tou to Honoo no Shoujo.
+Error: INSERT INTO ppvr.players (id, name, alias)
+       VALUES ('4734244', 'Informous', NULL);
+Column 'alias' cannot be null
+Player "Informous" updated successfully! Old name:
+Error: INSERT INTO ppvr.posts (id, player_id, map_artist, map_title, map_diff, author,
+                         score, ups, upvote_ratio, gilded, created_utc, final)
+       VALUES ('98t29l', '4734244', 'Imperial Circus Dead Decadence', 'Yomi yori Kikoyu, Koukoku no Tou to Honoo no Shoujo.', 'Kyouaku', 'Odkrywacz', 138, 138, 0, 0, 1534767281, 1);
+Cannot add or update a child row: a foreign key constraint fails (`ppvr`.`posts`, CONSTRAINT `posts_player_id_foreign` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`))
+
+**********2018-08-21T16:27:21.464324**********
+Connection successfull: localhost via TCP/IP
+
+Original: Hectique | GYZE - HONESTY [DISHONEST] 98.79% FC #32 600 PP | 92.72 UR | Rank #985 (#1072 Before FC)!!
+Parsed: Hectique  | GYZE - HONESTY
+New player "Hectique" added successfully
+Post added successfully
+
+Original: Piggey | Traktion - The Near Distant Future [Lapse] +HDDT 2xmiss 2190/2677 (98.51%) #3 (HD)DT 442pp | Highest (HD)DT acc!
+Parsed: Piggey  | Traktion - The Near Distant Future
+New player "Piggey" added successfully
+Post added successfully
+
+Original: mcy4 | Vickeblanka - Black Rover (TV Size) [Extra] + HDDT (mapset by Sotarks, 8.89*) (98.32%) 470/534x 4xMiss | 647pp (839 if FC) | 93.81 cv. UR | His new top play!
+Parsed: mcy4  | Vickeblanka - Black Rover (TV Size)
+New player "mcy4" added successfully
+Post added successfully
+
+Original: a_Blue | Aitsuki Nakuru - Monochrome Butterfly [Lami's Extra] +HDDT (mapset by Sotarks | 8.23*) | (96.99%) FC #6 | 621pp | cv.UR 83.64
+Parsed: a_Blue  | Aitsuki Nakuru - Monochrome Butterfly
+New player "a_Blue" added successfully
+Post added successfully
+
+Original: _RyuK | HoneyWorks - Miraizu feat.Aida Miou(CV:Toyosaki Aki) [Special] (7.9*) + HDDT FC 97.83% #3 614pp | 106.22 cv. UR
+Parsed: _RyuK  | HoneyWorks - Miraizu feat.Aida Miou(CV:Toyosaki Aki)
+New player "_RyuK" added successfully
+Post added successfully
+
+Original: (old score) lain | RazQ - International Wrestling Festival [Challenge -Gay Bar-] +HDHR 97.52% 264/287 1xmiss - CS7.8 6.8* map
+Parsed: (old score) lain  | RazQ - International Wrestling Festival
+
+Title: (old score) lain | RazQ - International Wrestling Festival [Challenge -Gay Bar-] +HDHR 97.52% 264/287 1xmiss - CS7.8 6.8* map
+Parsed Data:
+  -Player: (old score) lain 
+  -Artist: RazQ
+  -Title: International Wrestling Festival
+  -Diff: Challenge -Gay Bar-
+Temporary Post added successfully
+Original: EGG0001 [osu!taiko] | LOVED DJ Noriken feat. Nanahira - Sweet Wishes (katacheh) [LastWish] FC | 99.90% 4x 100
+Parsed: EGG0001 [osu!taiko]  | LOVED DJ Noriken feat. Nanahira - Sweet Wishes (katacheh)
+
+Title: EGG0001 [osu!taiko] | LOVED DJ Noriken feat. Nanahira - Sweet Wishes (katacheh) [LastWish] FC | 99.90% 4x 100
+Parsed Data:
+  -Player: EGG0001 [osu!taiko] 
+  -Artist: LOVED DJ Noriken feat. Nanahira
+  -Title: Sweet Wishes (katacheh)
+  -Diff: LastWish
+Temporary Post added successfully
+Original: Informous | Muzzy - Endgame [Gameover] (Secretpipe mapset | 7.92*) +HD,DT (98.99%) 1394/1542 2m | 631pp (719 if FC) 83.53 cv. UR
+Parsed: Informous  | Muzzy - Endgame
+New player "Informous" added successfully
+Post added successfully
+
+Original: Informous | UNDEAD CORPORATION - Yoru Naku Usagi wa Yume o Miru [Lunatic] (Smoothie mapset | 7.14*) +HD,DT (98.31%) FC #1 | 488pp 108.26 cv. UR
+Parsed: Informous  | UNDEAD CORPORATION - Yoru Naku Usagi wa Yume o Miru
+Post added successfully
+
+Original: Marek Marucha | Tapimiru - Hakkensha wa Watashi (TV Size) [Sotarks' Fantasy] (Agatsu mapset | 8.13*) +HD,DT (87.33%) FC #116 | 521pp 146 cv. UR
+Parsed: Marek Marucha  | Tapimiru - Hakkensha wa Watashi (TV Size)
+New player "Marek Marucha" added successfully
+Post added successfully
+
+Original: Cookiezi | DJ TOTTO - Crystalia [first half suc] (mapset by None1637 | 9.33*) +HD (98.33%) | 2xMiss | 76.37 UR
+Parsed: Cookiezi  | DJ TOTTO - Crystalia
+New player "Cookiezi" added successfully
+Post added successfully
+
+Original: filsdelama | Eguchi Takahiro - silver temple [Insane] +HDDT SS #1 | 437pp | 65.92cv. UR
+Parsed: filsdelama  | Eguchi Takahiro - silver temple
+New player "filsdelama" added successfully
+Post added successfully
+
+Original: Cookiezi | siromaru - Absurd Gaff [Maniac] +HD 98.66% FC — first FC, #1 LOVED
+Parsed: Cookiezi  | siromaru - Absurd Gaff
+Post added successfully
+
+Original: Mathi | HoneyWorks - Akatsuki Zukuyo [Taeyang's Extra] + HDDT (mapset by [C u r i], 8.38*) (98.20%) 796/1328x 2xSb | 569pp (812 if FC) | 83.01 cv. UR | Best (HD)DT acc
+Parsed: Mathi  | HoneyWorks - Akatsuki Zukuyo
+New player "Mathi" added successfully
+Post added successfully
+
+Original: Mathi | Tapimiru - Hakkensha wa Watashi (TV Size) [Sotarks' Fantasy] (Agatsu mapset | 8.13*) +HD,DT (99.11%) FC #1 | 649pp 65.97 cv. UR
+Parsed: Mathi  | Tapimiru - Hakkensha wa Watashi (TV Size)
+Post added successfully
+
+Original: Vaxei | Yousei Teikoku - Torikago [Extra] +HD,DT (99.48%) FC #1 | 644pp | 70.52cv. UR
+Parsed: Vaxei  | Yousei Teikoku - Torikago
+New player "Vaxei" added successfully
+Post added successfully
+
+Original: Ceptin | Luschka - Kami no Kotoba [Jounzan's Special] 8.88* (85.13%) 3rd DT(+HD) pass 105xmiss
+Parsed: Ceptin  | Luschka - Kami no Kotoba
+New player "Ceptin" added successfully
+Post added successfully
+
+Original: Emilia | Shuki Levy - The Super Mario Bros. Super Show! [Nold's Style] +HD,DT 98.04% FC #1 400pp
+Parsed: Emilia  | Shuki Levy - The Super Mario Bros. Super Show!
+New player "Emilia" added successfully
+Post added successfully
+
+Original: uyghti | Hagumi Nishizawa - My Hero! Up to you! [My Hero!] + DT (mapset by Xexxar | 8.00*) | (99.38%) FC #46 | 619pp | cv.UR 71.98
+Parsed: uyghti  | Hagumi Nishizawa - My Hero! Up to you!
+New player "uyghti" added successfully
+Post added successfully
+
+Original: DenierNezzar | Renard - Rainbow Dash Likes Girls (Stay Gay Pony Girl) [Holy Shit! It's Rainbow Dash!] | (mapset by ztrot, 6.99*) | 98.14% | 817x | 5x miss | #6 on map
+Parsed: DenierNezzar  | Renard - Rainbow Dash Likes Girls (Stay Gay Pony Girl)
+New player "DenierNezzar" added successfully
+Post added successfully
+
+Original: Informous | Imperial Circus Dead Decadence - Yomi yori Kikoyu, Koukoku no Tou to Honoo no Shoujo. [Kyouaku] (mapset by DoKito | 8.26*) | (95.30%) 1110/4353x 32xMiss #20 | 123.54 UR
+Parsed: Informous  | Imperial Circus Dead Decadence - Yomi yori Kikoyu, Koukoku no Tou to Honoo no Shoujo.
+Post added successfully

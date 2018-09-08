@@ -5,33 +5,23 @@ include("discord.php");
 include("reddit.php");
 date_default_timezone_set("UTC");
 
-$logfile = 'log.txt';
+$logfile = 'logs\log-'.date("m-d-y").'.txt';
 $GLOBALS['log'] = file_get_contents($logfile);
 $datetime = new DateTime();
 $GLOBALS['log'].= "\n**********".$datetime->format('Y-m-d\TH:i:s.u')."**********\n";
 
-//check internet connection
-$response = null;
-system("ping -c 1 reddit.com", $response);
-if($response == 0)
-{
-  //Connect to DB
-  $GLOBALS['conn'] = Database::getConnection();
+//Connect to DB
+$GLOBALS['conn'] = Database::getConnection();
 
-  //process reddit posts
-  if ($argc > 1) {
-    if ($argv[1] == '--archive') {
-      Reddit::archive();
-    }
-  }
-  else {
-    Reddit::new();
+//process reddit posts
+if ($argc > 1) {
+  if ($argv[1] == '--archive') {
+    Reddit::archive(0); //start with first post
   }
 }
 else {
-  $GLOBALS['log'].= "Kann Keine Verbindung zu Reddit herstellen. Abbrechen.";
+  Reddit::new();
 }
-
 
 file_put_contents($logfile, $GLOBALS['log']);
 
