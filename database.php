@@ -180,7 +180,9 @@ class Database {
                         //add update to update-table
                         $update = "INSERT INTO ppvr.update (id, score)
                         VALUES ('".$post->id."', ".$post->score.");";
-                        $db->query($update);
+                        if ($db->query($update) !== TRUE) {
+                            echo("Error: " . $update . "\n" . $db->error."\n");
+                        }
                     }
                     else {
                         echo("Error: " . $newPost . "\n" . $db->error."\n");
@@ -198,7 +200,9 @@ class Database {
                         //add update to update-table
                         $update = "INSERT INTO ppvr.update (id, score)
                         VALUES ('".$post->id."', ".$post->score.");";
-                        $db->query($update);
+                        if ($db->query($update) !== TRUE) {
+                            echo("Error: " . $update . "\n" . $db->error."\n");
+                        }
                     }
                     else {
                         $GLOBALS['log'] .= "Error: " . $postUpdate . "\n" . $db->error."\n";

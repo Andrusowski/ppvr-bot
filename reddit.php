@@ -51,7 +51,7 @@ class Reddit {
     public function archive() {
         //go through all new posts and parse which are not in Database
         $db = Database::getConnection();
-        $after = 0;
+        $after = 1426668291;  //time of first legit scorepost
         self::$lastParse = time();
 
         while ($after < time() - 60*60) { //stop archiving, when posts are younger than an hour
