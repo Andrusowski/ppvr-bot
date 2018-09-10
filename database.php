@@ -178,7 +178,7 @@ class Database {
                         $GLOBALS['log'] .= "Post added successfully\n";
 
                         //add update to update-table
-                        $update = "INSERT INTO ppvr.update (id, score)
+                        $update = "INSERT INTO ppvr.updates (id, score)
                         VALUES ('".$post->id."', ".$post->score.");";
                         if ($db->query($update) !== TRUE) {
                             echo("Error: " . $update . "\n" . $db->error."\n");
@@ -198,7 +198,7 @@ class Database {
                         $GLOBALS['log'] .= "Non-final post updated successfully\n";
 
                         //add update to update-table
-                        $update = "INSERT INTO ppvr.update (id, score)
+                        $update = "INSERT INTO ppvr.updates (id, score)
                         VALUES ('".$post->id."', ".$post->score.");";
                         if ($db->query($update) !== TRUE) {
                             echo("Error: " . $update . "\n" . $db->error."\n");
