@@ -174,6 +174,11 @@ class Database {
 
                     if ($db->query($newPost) === TRUE) {
                         $GLOBALS['log'] .= "Post added successfully\n";
+
+                        //add update to update-table
+                        $update = "INSERT INTO ppvr.update (id, score)
+                        VALUES ('".$post->id."', ".$post->score.");";
+                        $db->query($update);
                     }
                     else {
                         echo("Error: " . $newPost . "\n" . $db->error."\n");
@@ -191,7 +196,7 @@ class Database {
                         //add update to update-table
                         $update = "INSERT INTO ppvr.update (id, score)
                         VALUES ('".$post->id."', ".$post->score.");";
-                        $db->query($postUpdate);
+                        $db->query($update);
                     }
                     else {
                         $GLOBALS['log'] .= "Error: " . $postUpdate . "\n" . $db->error."\n";
