@@ -57,7 +57,7 @@ class Database {
                 #postToDiscord($post, 0, $parsedPost);
             }
             else {
-                $GLOBALS['log'] .= "Error: " . $newPost . "\n" . $db->error."\n";
+                echo("Error: " . $newPost . "\n" . $db->error."\n");
             }
         }
 
