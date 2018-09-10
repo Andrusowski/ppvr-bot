@@ -15,12 +15,12 @@ $GLOBALS['conn'] = Database::getConnection();
 
 //process reddit posts
 if ($argc > 1) {
-  if ($argv[1] == '--archive') {
-    Reddit::archive(0); //start with first post
-  }
+    if ($argv[1] == '--archive') {
+        Reddit::archive(0); //start with first post
+    }
 }
 else {
-  Reddit::new();
+    Reddit::new();
 }
 
 file_put_contents($logfile, $GLOBALS['log']);

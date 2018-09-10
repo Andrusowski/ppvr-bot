@@ -1,4 +1,3 @@
 db.php
-log.txt
 
-/vendor/
+/logs/*
