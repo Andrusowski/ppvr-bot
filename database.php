@@ -41,7 +41,7 @@ class Database {
         "INSERT INTO ppvr.tmpposts (id, title, author, score)
         VALUES ('".$post->id."', '"
             .htmlspecialchars_decode($db->real_escape_string($post->title))."', '"
-            .$post->author."', '"
+            .$post->author."', "
             .$post->score.");";
 
             $error ="\nTitle: ".$post->title.
