@@ -143,7 +143,9 @@ class Database {
             $resultUser = $result->fetch_assoc();
 
             //update username in case of namechange, save old username in alias
-            if ($resultUser["name"] != $user[0]->username) {
+            if ($resultUser["name"] != $user[0]->username
+            && $resultUser["name"] != ""
+            && $resultUser["name"] != null) {
                 $updatePlayer = "UPDATE ppvr.players
                 SET name='".$user[0]->username."', alias='".$resultUser["name"]."'
                 WHERE  id=".(int)$user[0]->user_id.";";
