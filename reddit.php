@@ -72,7 +72,7 @@ class Reddit {
 
                 $age = time() - $post->created_utc;
 
-                if ($result->num_rows == 0) {
+                if ($result->num_rows == 0) {                    
                     //determine if post is final (>48h old)
                     if ($age >= 48*60*60) {
                         Reddit::parsePost($post, 1, 1);

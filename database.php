@@ -191,6 +191,10 @@ class Database {
 
                 public function updatePost($post, $final) {
                     $db = Database::getConnection();
+
+                    $content = file_get_contents("https://www.reddit.com/r/osugame/comments/".$post->id.".json");
+                    $post = json_decode($content)[0]->data->children[0]->data;
+
                     $postUpdate = "UPDATE ppvr.posts
                     SET score=".$post->score.", ups=".round($post->score * $post->upvote_ratio).", downs=".round($post->score * (1 - $post->upvote_ratio)).", gilded=".$post->gilded.", final=".$final."
                     WHERE id='".$post->id."' AND final=0;";
