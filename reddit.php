@@ -73,6 +73,9 @@ class Reddit {
                 $age = time() - $post->created_utc;
 
                 if ($result->num_rows == 0) {
+                    $content = file_get_contents("https://www.reddit.com/r/osugame/comments/".$post->id.".json");
+                    $post = json_decode($content)[0]->data->children[0]->data;
+                    
                     //determine if post is final (>48h old)
                     if ($age >= 48*60*60) {
                         Reddit::parsePost($post, 1, 1);
