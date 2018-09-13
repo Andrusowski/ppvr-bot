@@ -4,11 +4,11 @@ class Reddit {
     private static $lastParse;
 
     public function new() {
-        #$content=file_get_contents("https://ga.reddit.com/r/osugame/new.json?limit=100");
+        //$content=file_get_contents("https://ga.reddit.com/r/osugame/new.json?limit=100");
         $content=file_get_contents("https://ga.reddit.com/r/osugame/search.json?q=flair%3AGameplay&sort=new&restrict_sr=on&t=all");
         $posts = json_decode($content);
 
-        //go through all new posts and parse which are not in the Database
+        //go through all new posts and parse, if not in the Database
         $db = Database::getConnection();
         for ($i = 0; $i < $posts->data->dist; ++$i) {
             $post = $posts->data->children[$i]->data;
@@ -22,6 +22,7 @@ class Reddit {
             $result = $db->query($existingPost);
 
             $age = time() - $post->created_utc;
+
 
             if ($result->num_rows == 0) {
                 //determine if post is final (>48h old)
@@ -51,7 +52,7 @@ class Reddit {
     public function archive() {
         //go through all new posts and parse which are not in Database
         $db = Database::getConnection();
-        $after = 1426668291;  //time of first legit scorepost
+        $after = 1426668291;  //time of first scorepost posted
         self::$lastParse = time();
 
         while ($after < time() - 60*60) { //stop archiving, when posts are younger than an hour
@@ -72,7 +73,7 @@ class Reddit {
 
                 $age = time() - $post->created_utc;
 
-                if ($result->num_rows == 0) {                    
+                if ($result->num_rows == 0) {
                     //determine if post is final (>48h old)
                     if ($age >= 48*60*60) {
                         Reddit::parsePost($post, 1, 1);
