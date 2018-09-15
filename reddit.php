@@ -135,7 +135,11 @@ class Reddit {
             $postTitle = preg_replace('/([\[\(]\#.*[\]\)])/U', '', $postTitle);
 
             foreach(self::$title_ignores as $ignore) {
+<<<<<<< HEAD
                 $postTitle = preg_replace("/([\[\(]\Q".$ignore."\E[\]\)])/i", '', $postTitle);
+=======
+                $postTitle = preg_replace("/([\[\(]".$ignore."[\]\)])/i", '', $postTitle);
+>>>>>>> 87a40a1ec1f735bf2fcc76c80fa1515db8b407fd
             }
 
             ////parse relevant information from post title
