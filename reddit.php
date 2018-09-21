@@ -127,9 +127,7 @@ class Reddit {
         /* check for characteristic characters from the already established format
         Player Name | Song Artist - Song Title [Diff Name] +Mods */
         $postTitle = $post->title;
-        if (strpos($postTitle, '|') &&
-        strpos($postTitle, '-') &&
-        strpos($postTitle, '['))
+        if (preg_match('/.*\|.*\-.*\[.*\].*/', $postTitle)
         {
             //clean up posttitle from various annotations
             $postTitle = preg_replace('/([\[\(]\#.*[\]\)])/U', '', $postTitle);
@@ -160,19 +158,13 @@ class Reddit {
 
             //map Data
             $tmpMap = '';
-            $match = preg_match("/.+[\|丨]\s+(.+-.+\[.+\])/", $postTitle, $matches);
-            if ($match != FALSE && count($matches) == 2) {
-                $tmpMap = $matches[1];
-            }
-            else {
-                $match = preg_match("/.+[\|丨]\s*(.+-.+\[.+\])/", $postTitle, $matches);
-                if ($match != FALSE && count($matches) == 2) {
-                    $tmpMap = $matches[1];
-                }
-                else {
-                    $parseError = true;
-                }
-            }
+			$match = preg_match("/.+[\|丨]\s*(.+-.+\[.+\])/", $postTitle, $matches);
+			if ($match != FALSE && count($matches) == 2) {
+				$tmpMap = $matches[1];
+			}
+			else {
+				$parseError = true;
+			}
 
             //split map Data
             $match = preg_match("/(.+)\s-\s(.+?)\s\[(.+?)\]/", $tmpMap, $matches);
