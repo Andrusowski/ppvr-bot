@@ -127,7 +127,7 @@ class Reddit {
         /* check for characteristic characters from the already established format
         Player Name | Song Artist - Song Title [Diff Name] +Mods */
         $postTitle = $post->title;
-        if (preg_match('/.*\|.*\-.*\[.*\].*/', $postTitle)
+        if (preg_match('/.*\|.*\-.*\[.*\].*/', $postTitle))
         {
             //clean up posttitle from various annotations
             $postTitle = preg_replace('/([\[\(]\#.*[\]\)])/U', '', $postTitle);
