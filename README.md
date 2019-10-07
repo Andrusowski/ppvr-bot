@@ -1,1 +1,1 @@
-This project is deprecated and its functionality is implemented in [ppvr-web](https://github.com/Andrusowski/ppvr-web)
+This project is deprecated and its functionality is implemented in [ppvr-web](https://github.com/Andrusowski/ppvr-web) as an artisan command
