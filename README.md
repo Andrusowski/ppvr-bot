@@ -1,3 +1,1 @@
-This PHP-script parses scorepost from [/r/osugame](https://www.reddit.com/r/osugame/) and saves relevant information in a database.
-
-[More Info here](https://github.com/Andrusowski/ppvr-web)
+This project is deprecated and its functionality is implemented in [ppvr-web](https://github.com/Andrusowski/ppvr-web)
